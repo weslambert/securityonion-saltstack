@@ -79,6 +79,12 @@ so-kibana:
     - port_bindings:
       - 0.0.0.0:5601:5601
 
+so-kibana-config-load:
+  cmd.script:
+    - shell: /bin/bash
+    - runas: socore
+    - source: salt://kibana/bin/so-kibana-config-load
+
 # Keep the setting correct
 #KibanaHappy:
 #  cmd.script:
